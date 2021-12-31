@@ -1,15 +1,8 @@
 import {useState} from 'react';
-import {StyledCardFilters} from '../../styles/Card.styled';
+import {StyledCardFilters} from '../../../styles/Card.styled';
 import {Link} from 'react-router-dom';
 
 export const Filters = () => {
-	// const data = {
-	// 	filters: [
-	// 		{ name: 'Spoken Language', active: false, selected: "English" },
-	// 		{ name: 'Language', active: false, selected: "Javascript" },
-	// 		{name: 'Date Range', active:false, selected:"English"}
-	// 	]
-	// }
 
 	const [SpokenLanguageToggle, setSpokenLanguageToggle] = useState(false);
 	const [LanguageToggle, setLanguageToggle] = useState(false);

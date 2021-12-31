@@ -1,19 +1,20 @@
 import React from 'react';
-import Wrapper from '../Theme/Styles/Wrapper.styled';
-import {Container} from '../Theme/Styles/Container.styled';
-import Navbar from '../Components/Navigation/Index';
-import BreadCrumb from '../Components/Features/BreadCrumb';
-import {Body} from '../Components/Body';
+
+import '@github/g-emoji-element';
+import {Routes, Route} from 'react-router-dom';
+import Layout from '../Layout';
+import Trending from '../pages/Trending';
+import {Developers} from '../pages/Developer';
 
 function App() {
 	return (
 		<>
-			<Wrapper />
-			<Container>
-				<Navbar></Navbar>
-				<BreadCrumb />
-				<Body />
-			</Container>
+			<Routes>
+				<Route index element={<Layout />} />
+				<Route path='/trending' element={<Trending />} />
+				<Route path='/developers' element={<Developers />} />
+				<Route path='*' element={<h1>Nothing to show</h1>} />
+			</Routes>
 		</>
 	);
 }
