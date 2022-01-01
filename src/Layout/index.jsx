@@ -15,7 +15,9 @@ const Layout = () => {
 				<BreadCrumb />
 				<Routes>
 					<Route path='/' element={<Trending />} />
-					<Route path='/developers' element={<Developers />} />
+					<Route path='trending' element={<Trending />} />
+					<Route path='developers' element={<Developers />} />
+					<Route path='*' element={<h1>No Data Found</h1>} />
 				</Routes>
 			</Container>
 		</>

@@ -1,37 +1,18 @@
 import {Link} from 'react-router-dom';
-import {useEffect, useState} from 'react';
+import {useQuery} from 'react-query';
 
-import githubTrends from 'github-trends-api';
+// const developersUrl = 'https://github.com/trending?since=daily';
 // const fetchDevelopers = async () => {
-// 	const res = await githubTrends()
-// 		.then(result => {
-// 			return Promise.resolve(result);
-// 		})
-// 		.catch(error => {
-// 			return Promise.reject(error);
-// 		});
-// 	return res;
+// 	const res = await fetch(developersUrl, {
+// 		method: 'Get',
+// 		mode: 'no-cors',
+// 	});
+// 	return res.body;
 // };
 
 export const DeveloperSection = () => {
-	const [list, setList] = useState([]);
-
-	const fetchDevelopers = async () => {
-		const res = await githubTrends()
-			.then(result => {
-				return Promise.resolve(result);
-			})
-			.catch(error => {
-				return Promise.reject(error);
-			});
-		setList(res.json());
-	};
-
-	useEffect(() => {
-		fetchDevelopers();
-	}, []);
-
-	console.log(list);
+	// const {data, status} = useQuery('developers', fetchDevelopers);
+	// console.log(data, status);
 	return (
 		<div>
 			<div className='developers-card'>
